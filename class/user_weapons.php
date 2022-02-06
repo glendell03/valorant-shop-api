@@ -81,4 +81,18 @@ class UserWeapons
         $this->chromas = $dataRow['chromas'];
         $this->levels = $dataRow['levels'];
     }
+
+    function deleteUserWeapons(){
+        $sqlQuery = "DELETE FROM " . $this->db_table . " WHERE uuid = ?";
+        $stmt = $this->conn->prepare($sqlQuery);
+    
+        $this->uuid=htmlspecialchars(strip_tags($this->uuid));
+    
+        $stmt->bindParam(1, $this->uuid);
+    
+        if($stmt->execute()){
+            return true;
+        }
+        return false;
+    }
 }

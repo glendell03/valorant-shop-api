@@ -14,7 +14,7 @@ $items = new UserWeapons($db);
 $stmt = $items->getAllWeapons();
 $itemCount = $stmt->rowCount();
 
-echo json_encode($itemCount);
+//echo json_encode($itemCount);
 
 if ($itemCount > 0) {
     $userWeaponArr = array();
