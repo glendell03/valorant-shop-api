@@ -1,10 +1,10 @@
 <?php 
 
 class Database {
-    private $host = 'localhost';
-    private $db_name = 'valorant-shop-api';
-    private $username = 'root';
-    private $password = '';
+    private $host = 'sql309.epizy.com';
+    private $db_name = 'epiz_31371144_valorantshopapi';
+    private $username = 'epiz_31371144';
+    private $password = 'Xa0zw8EQBiGFzn';
 
     public $conn;
 
